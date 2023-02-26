@@ -5646,6 +5646,7 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 //
 //
 //
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -30499,6 +30500,8 @@ var render = function () {
           _c("title-component", { attrs: { title: _vm.product.name } }),
           _vm._v(" "),
           _c("p", [_vm._v(_vm._s(_vm.product.description))]),
+          _vm._v(" "),
+          _c("p", [_vm._v("Rp. " + _vm._s(_vm.product.price))]),
           _vm._v(" "),
           _vm.product.stock > 0
             ? _c("p", [_vm._v("tersisa : " + _vm._s(_vm.product.stock))])

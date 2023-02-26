@@ -7,6 +7,7 @@
       <div class = "product-info">
           <title-component :title="product.name"/>
           <p>{{ product.description}}</p>
+          <p>Rp. {{ product.price }}</p>
           <p v-if="product.stock > 0">tersisa : {{ product.stock }}</p>
           <p v-else>Out of Stock</p>
           <button-component v-if="product.stock > 0" text="Masuk Keranjang" @emitClick="addToCart(product)"/>
