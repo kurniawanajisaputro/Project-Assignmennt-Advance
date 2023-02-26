@@ -11,7 +11,7 @@
         <button-component text="Tidak" @emitClick="showPopup = false"/>
       </div>
       <div v-if="showConfirmation" class="popup-message">
-        <p>Pesanan anda telah dikonfirmasi</p>
+        <p>Terima kasih telah berbelanja di toko barokah sakinah mawadah waromah</p>
         <button-component text="OK" @emitClick="showConfirmation = false"/>
       </div>
     </div>

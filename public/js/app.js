@@ -5634,6 +5634,11 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -6199,19 +6204,22 @@ var state = {
     name: "Indomie Goreng Rendang",
     description: "Masakan instan terenak di dunia",
     stock: 10,
-    price: 3900
+    price: 3900,
+    imageUrl: './images/indomie_goreng_rendang.jpg'
   }, {
     id: 2,
-    name: "Mie Gelas Rendang",
+    name: "Mie Gelas Soto",
     description: "Mie instan khusus anak kosan",
     stock: 5,
-    price: 1500
+    price: 1500,
+    imageUrl: './images/mie_gelas_soto.jpg'
   }, {
     id: 3,
     name: "Bakmi Mewah",
     description: "Kalau anak kosan jangan macam2 deh",
     stock: 80,
-    price: 10000
+    price: 10000,
+    imageUrl: './images/bakmi_mewah.jpg'
   }],
   cart: [],
   cartTotal: [],
@@ -30330,7 +30338,11 @@ var render = function () {
                 "div",
                 { staticClass: "popup-message" },
                 [
-                  _c("p", [_vm._v("Pesanan anda telah dikonfirmasi")]),
+                  _c("p", [
+                    _vm._v(
+                      "Terima kasih telah berbelanja di toko barokah sakinah mawadah waromah"
+                    ),
+                  ]),
                   _vm._v(" "),
                   _c("button-component", {
                     attrs: { text: "OK" },
@@ -30445,33 +30457,40 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("tr", [
-    _c("td", [_vm._v(_vm._s(_vm.product.name))]),
-    _vm._v(" "),
-    _c("td", [_vm._v(_vm._s(_vm.product.description))]),
-    _vm._v(" "),
-    _c("td", [_vm._v(_vm._s(_vm.product.stock))]),
-    _vm._v(" "),
-    _c("td", [_vm._v("Rp. " + _vm._s(_vm.product.price))]),
-    _vm._v(" "),
-    _c(
-      "td",
-      [
-        _vm.product.stock > 0
-          ? _c("button-component", {
-              attrs: { text: "Masuk Keranjang" },
-              on: {
-                emitClick: function ($event) {
-                  return _vm.addToCart(_vm.product)
+  return _c("div", { staticClass: "product-display" }, [
+    _c("div", { staticClass: "product-container" }, [
+      _c("div", { staticClass: "product-image" }, [
+        _c("img", { attrs: { src: _vm.product.imageUrl } }),
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "product-info" },
+        [
+          _c("title-component", { attrs: { title: _vm.product.name } }),
+          _vm._v(" "),
+          _c("p", [_vm._v(_vm._s(_vm.product.description))]),
+          _vm._v(" "),
+          _vm.product.stock > 0
+            ? _c("p", [_vm._v("tersisa : " + _vm._s(_vm.product.stock))])
+            : _c("p", [_vm._v("Out of Stock")]),
+          _vm._v(" "),
+          _vm.product.stock > 0
+            ? _c("button-component", {
+                attrs: { text: "Masuk Keranjang" },
+                on: {
+                  emitClick: function ($event) {
+                    return _vm.addToCart(_vm.product)
+                  },
                 },
-              },
-            })
-          : _c("button-component", {
-              attrs: { text: "stock habis", color: "grey" },
-            }),
-      ],
-      1
-    ),
+              })
+            : _c("button-component", {
+                attrs: { text: "stock habis", color: "grey" },
+              }),
+        ],
+        1
+      ),
+    ]),
   ])
 }
 var staticRenderFns = []
