@@ -5512,8 +5512,13 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 /*!***********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js& ***!
   \***********************************************************************************************************************************************************************************************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 //
 //
 //
@@ -5562,52 +5567,38 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 //
 //
 
-// import { mapGetters } from "vuex";
-//     export default {
-
-//     methods: {
-//         // getData(){
-//         //     console.log("getdata component");
-//         //     this.$store.dispatch("getAllData")
-//         // },
-//         // getQuote(){
-//         //     this.$store.dispatch("getQuote")
-//         // }
-//         getData(){
-//             console.log("getdata component");
-//             this.$store.dispatch("getAllData")
-//         },
-
-//         postData(){
-//             let payload = {}
-//             payload.name = this.inputData,
-//             payload.id = 4
-//             this.$store.dispatch("postData", payload)
-//         },
-//         putData(){
-//             let payload = {}
-//             payload.name = this.inputData,
-//             payload.id = 1
-//             this.$store.dispatch("putData", payload)
-//         },
-//         patchData(){
-//             let payload = {}
-//             payload.name = this.inputData,
-//             payload.id = 1
-//             this.$store.dispatch("patchData", payload)
-//         },
-//         deleteData(){
-//             let payload = {}
-//             payload.id = this.inputData,
-//             this.$store.dispatch("deleteData", payload)
-//         },
-//         productPage(){
-//             this.$store.dispatch("productPage", payload)
-//         },
-//         cartPage(){
-//             this.$store.dispatch("cartPage", payload)
-//         }
-//     }}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  methods: {
+    getData: function getData() {
+      console.log("getdata component");
+      this.$store.dispatch("getAllData");
+    },
+    postData: function postData() {
+      var payload = {};
+      payload.name = this.inputData, payload.id = 4;
+      this.$store.dispatch("postData", payload);
+    },
+    putData: function putData() {
+      var payload = {};
+      payload.name = this.inputData, payload.id = 1;
+      this.$store.dispatch("putData", payload);
+    },
+    patchData: function patchData() {
+      var payload = {};
+      payload.name = this.inputData, payload.id = 1;
+      this.$store.dispatch("patchData", payload);
+    },
+    deleteData: function deleteData() {
+      var payload = {};
+      payload.id = this.inputData, this.$store.dispatch("deleteData", payload);
+    } // productPage(){
+    //     this.$store.dispatch("productPage", payload)
+    // },
+    // cartPage(){
+    //     this.$store.dispatch("cartPage", payload)
+    // }
+  }
+});
 
 /***/ }),
 
@@ -5948,114 +5939,88 @@ function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyri
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-var addToCart = function addToCart(_ref, product) {
-  var commit = _ref.commit;
-  commit('ADD_TO_CART', product);
-};
-var removeFromCart = function removeFromCart(_ref2, index) {
-  var commit = _ref2.commit;
-  commit('REMOVE_FROM_CART', index);
-};
-var increaseQty = function increaseQty(_ref3, item) {
-  var commit = _ref3.commit;
-  commit('Increase_Qty', item);
-};
-var decreaseQty = function decreaseQty(_ref4, item) {
-  var commit = _ref4.commit;
-  commit('Decrease_Qty', item);
-};
-var getAllData = /*#__PURE__*/function () {
-  var _ref5 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(context) {
-    var response;
+var addToCart = /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(context, product) {
     return _regeneratorRuntime().wrap(function _callee$(_context) {
       while (1) switch (_context.prev = _context.next) {
         case 0:
-          _context.next = 2;
-          return axios__WEBPACK_IMPORTED_MODULE_0___default().get("api/getAllData");
-        case 2:
-          response = _context.sent;
-          return _context.abrupt("return", response);
-        case 4:
+          context.commit('ADD_TO_CART', product);
+          _context.next = 3;
+          return axios__WEBPACK_IMPORTED_MODULE_0___default().post('api/postData');
+        case 3:
         case "end":
           return _context.stop();
       }
     }, _callee);
   }));
-  return function getAllData(_x) {
-    return _ref5.apply(this, arguments);
+  return function addToCart(_x, _x2) {
+    return _ref.apply(this, arguments);
   };
 }();
-var postData = /*#__PURE__*/function () {
-  var _ref6 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(context, payload) {
-    var response;
+var removeFromCart = /*#__PURE__*/function () {
+  var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(context, index) {
     return _regeneratorRuntime().wrap(function _callee2$(_context2) {
       while (1) switch (_context2.prev = _context2.next) {
         case 0:
-          _context2.next = 2;
-          return axios__WEBPACK_IMPORTED_MODULE_0___default().post("api/postData", payload);
-        case 2:
-          response = _context2.sent;
-          return _context2.abrupt("return", response);
-        case 4:
+          context.commit('REMOVE_FROM_CART', index);
+          _context2.next = 3;
+          return axios__WEBPACK_IMPORTED_MODULE_0___default()["delete"]('api/deleteData', {
+            data: index
+          });
+        case 3:
         case "end":
           return _context2.stop();
       }
     }, _callee2);
   }));
-  return function postData(_x2, _x3) {
-    return _ref6.apply(this, arguments);
+  return function removeFromCart(_x3, _x4) {
+    return _ref2.apply(this, arguments);
   };
 }();
-var putData = /*#__PURE__*/function () {
-  var _ref7 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(context, payload) {
-    var response;
+var increaseQty = /*#__PURE__*/function () {
+  var _ref3 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(context, item) {
     return _regeneratorRuntime().wrap(function _callee3$(_context3) {
       while (1) switch (_context3.prev = _context3.next) {
         case 0:
-          _context3.next = 2;
-          return axios__WEBPACK_IMPORTED_MODULE_0___default().put("api/putData", payload);
-        case 2:
-          response = _context3.sent;
-          return _context3.abrupt("return", response);
-        case 4:
+          context.commit('Increase_Qty', item);
+          _context3.next = 3;
+          return axios__WEBPACK_IMPORTED_MODULE_0___default().patch('api/patchData', item);
+        case 3:
         case "end":
           return _context3.stop();
       }
     }, _callee3);
   }));
-  return function putData(_x4, _x5) {
-    return _ref7.apply(this, arguments);
+  return function increaseQty(_x5, _x6) {
+    return _ref3.apply(this, arguments);
   };
 }();
-var patchData = /*#__PURE__*/function () {
-  var _ref8 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4(context, payload) {
-    var response;
+var decreaseQty = /*#__PURE__*/function () {
+  var _ref4 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4(context, item) {
     return _regeneratorRuntime().wrap(function _callee4$(_context4) {
       while (1) switch (_context4.prev = _context4.next) {
         case 0:
-          _context4.next = 2;
-          return axios__WEBPACK_IMPORTED_MODULE_0___default().patch("api/patchData", payload);
-        case 2:
-          response = _context4.sent;
-          return _context4.abrupt("return", response);
-        case 4:
+          context.commit('Decrease_Qty', item);
+          _context4.next = 3;
+          return axios__WEBPACK_IMPORTED_MODULE_0___default().patch('api/patchData', item);
+        case 3:
         case "end":
           return _context4.stop();
       }
     }, _callee4);
   }));
-  return function patchData(_x6, _x7) {
-    return _ref8.apply(this, arguments);
+  return function decreaseQty(_x7, _x8) {
+    return _ref4.apply(this, arguments);
   };
 }();
-var deleteData = /*#__PURE__*/function () {
-  var _ref9 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5(context, payload) {
+var getAllData = /*#__PURE__*/function () {
+  var _ref5 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5(context) {
     var response;
     return _regeneratorRuntime().wrap(function _callee5$(_context5) {
       while (1) switch (_context5.prev = _context5.next) {
         case 0:
           _context5.next = 2;
-          return axios__WEBPACK_IMPORTED_MODULE_0___default()["delete"]("api/deleteData/" + payload.id);
+          return axios__WEBPACK_IMPORTED_MODULE_0___default().get("api/getAllData");
         case 2:
           response = _context5.sent;
           return _context5.abrupt("return", response);
@@ -6065,20 +6030,94 @@ var deleteData = /*#__PURE__*/function () {
       }
     }, _callee5);
   }));
-  return function deleteData(_x8, _x9) {
+  return function getAllData(_x9) {
+    return _ref5.apply(this, arguments);
+  };
+}();
+var postData = /*#__PURE__*/function () {
+  var _ref6 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6(context, payload) {
+    var response;
+    return _regeneratorRuntime().wrap(function _callee6$(_context6) {
+      while (1) switch (_context6.prev = _context6.next) {
+        case 0:
+          _context6.next = 2;
+          return axios__WEBPACK_IMPORTED_MODULE_0___default().post("api/postData", payload);
+        case 2:
+          response = _context6.sent;
+          return _context6.abrupt("return", response);
+        case 4:
+        case "end":
+          return _context6.stop();
+      }
+    }, _callee6);
+  }));
+  return function postData(_x10, _x11) {
+    return _ref6.apply(this, arguments);
+  };
+}();
+var putData = /*#__PURE__*/function () {
+  var _ref7 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee7(context, payload) {
+    var response;
+    return _regeneratorRuntime().wrap(function _callee7$(_context7) {
+      while (1) switch (_context7.prev = _context7.next) {
+        case 0:
+          _context7.next = 2;
+          return axios__WEBPACK_IMPORTED_MODULE_0___default().put("api/putData", payload);
+        case 2:
+          response = _context7.sent;
+          return _context7.abrupt("return", response);
+        case 4:
+        case "end":
+          return _context7.stop();
+      }
+    }, _callee7);
+  }));
+  return function putData(_x12, _x13) {
+    return _ref7.apply(this, arguments);
+  };
+}();
+var patchData = /*#__PURE__*/function () {
+  var _ref8 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee8(context, payload) {
+    var response;
+    return _regeneratorRuntime().wrap(function _callee8$(_context8) {
+      while (1) switch (_context8.prev = _context8.next) {
+        case 0:
+          _context8.next = 2;
+          return axios__WEBPACK_IMPORTED_MODULE_0___default().patch("api/patchData", payload);
+        case 2:
+          response = _context8.sent;
+          return _context8.abrupt("return", response);
+        case 4:
+        case "end":
+          return _context8.stop();
+      }
+    }, _callee8);
+  }));
+  return function patchData(_x14, _x15) {
+    return _ref8.apply(this, arguments);
+  };
+}();
+var deleteData = /*#__PURE__*/function () {
+  var _ref9 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee9(context, payload) {
+    var response;
+    return _regeneratorRuntime().wrap(function _callee9$(_context9) {
+      while (1) switch (_context9.prev = _context9.next) {
+        case 0:
+          _context9.next = 2;
+          return axios__WEBPACK_IMPORTED_MODULE_0___default()["delete"]("api/deleteData/" + payload.id);
+        case 2:
+          response = _context9.sent;
+          return _context9.abrupt("return", response);
+        case 4:
+        case "end":
+          return _context9.stop();
+      }
+    }, _callee9);
+  }));
+  return function deleteData(_x16, _x17) {
     return _ref9.apply(this, arguments);
   };
 }();
-// const productPage = async (context, payload) => {
-//     let response = await axios.delete("api/productPage/" + payload.id);
-
-//     return response
-// }
-// const cartPage = async (context, payload) => {
-//     let response = await axios.delete("api/cartPage/" + payload.id);
-
-//     return response
-// }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   addToCart: addToCart,
   removeFromCart: removeFromCart,
@@ -6089,8 +6128,6 @@ var deleteData = /*#__PURE__*/function () {
   putData: putData,
   patchData: patchData,
   deleteData: deleteData
-  // productPage,
-  // cartPage
 });
 
 /***/ }),
@@ -29514,9 +29551,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ExampleComponent.vue?vue&type=template&id=299e239e& */ "./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&");
 /* harmony import */ var _ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ExampleComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ var __WEBPACK_REEXPORT_OBJECT__ = {};
-/* harmony reexport (unknown) */ for(const __WEBPACK_IMPORT_KEY__ in _ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== "default") __WEBPACK_REEXPORT_OBJECT__[__WEBPACK_IMPORT_KEY__] = () => _ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[__WEBPACK_IMPORT_KEY__]
-/* harmony reexport (unknown) */ __webpack_require__.d(__webpack_exports__, __WEBPACK_REEXPORT_OBJECT__);
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -29782,11 +29816,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ExampleComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ var __WEBPACK_REEXPORT_OBJECT__ = {};
-/* harmony reexport (unknown) */ for(const __WEBPACK_IMPORT_KEY__ in _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== "default") __WEBPACK_REEXPORT_OBJECT__[__WEBPACK_IMPORT_KEY__] = () => _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[__WEBPACK_IMPORT_KEY__]
-/* harmony reexport (unknown) */ __webpack_require__.d(__webpack_exports__, __WEBPACK_REEXPORT_OBJECT__);
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default())); 
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 

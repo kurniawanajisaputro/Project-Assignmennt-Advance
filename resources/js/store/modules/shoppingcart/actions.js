@@ -1,56 +1,50 @@
 import axios from "axios";
 
-const addToCart = ({commit},product) => {
-    commit('ADD_TO_CART',product)
+const addToCart = async (context, product) => {
+    context.commit('ADD_TO_CART',product)
+    await axios.post('api/postData');
     }
-const removeFromCart = ({commit},index) => {
-        commit('REMOVE_FROM_CART',index)
+const removeFromCart = async (context, index) => {
+    context.commit('REMOVE_FROM_CART',index)
+        await axios.delete('api/deleteData', { data: index });
     }
-const increaseQty = ({commit}, item) => {
-        commit('Increase_Qty',item)
+const increaseQty = async (context, item) => {
+    context.commit('Increase_Qty',item)
+        await axios.patch('api/patchData', item);
     }
-const decreaseQty = ({commit}, item) => {
-        commit('Decrease_Qty',item)
+const decreaseQty = async (context, item) => {
+    context.commit('Decrease_Qty',item)
+        await axios.patch('api/patchData', item);
         }
-        const getAllData = async (context) => {
-            let response = await axios.get("api/getAllData");
+const getAllData = async (context) => {
+    let response = await axios.get("api/getAllData");
         
-            return response
-        }
+    return response
+    }
         
-        const postData = async (context, payload) => {
-            let response = await axios.post("api/postData", payload);
+const postData = async (context, payload) => {
+    let response = await axios.post("api/postData", payload);
         
-            return response
-        }
+    return response
+    }
         
-        const putData = async (context, payload) => {
-            let response = await axios.put("api/putData", payload);
+const putData = async (context, payload) => {
+    let response = await axios.put("api/putData", payload);
         
-            return response
-        }
+    return response
+    }
         
-        const patchData = async (context, payload) => {
-            let response = await axios.patch("api/patchData", payload);
+const patchData = async (context, payload) => {
+    let response = await axios.patch("api/patchData", payload);
         
-            return response
-        }
+    return response
+    }
         
-        const deleteData = async (context, payload) => {
-            let response = await axios.delete("api/deleteData/" + payload.id);
+const deleteData = async (context, payload) => {
+    let response = await axios.delete("api/deleteData/" + payload.id);
         
-            return response
-        }
-        // const productPage = async (context, payload) => {
-        //     let response = await axios.delete("api/productPage/" + payload.id);
-        
-        //     return response
-        // }
-        // const cartPage = async (context, payload) => {
-        //     let response = await axios.delete("api/cartPage/" + payload.id);
-        
-        //     return response
-        // }
+    return response
+    }
 export default{
     addToCart,
     removeFromCart,
@@ -61,6 +55,4 @@ export default{
     putData,
     patchData,
     deleteData,
-    // productPage,
-    // cartPage
 }

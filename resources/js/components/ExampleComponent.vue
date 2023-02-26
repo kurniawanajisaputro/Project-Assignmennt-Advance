@@ -46,50 +46,42 @@
 </template>
 
 <script>
-  // import { mapGetters } from "vuex";
-  //     export default {
+      export default {
 
-  //     methods: {
-  //         // getData(){
-  //         //     console.log("getdata component");
-  //         //     this.$store.dispatch("getAllData")
-  //         // },
-  //         // getQuote(){
-  //         //     this.$store.dispatch("getQuote")
-  //         // }
-  //         getData(){
-  //             console.log("getdata component");
-  //             this.$store.dispatch("getAllData")
-  //         },
+      methods: {
+          getData(){
+              console.log("getdata component");
+              this.$store.dispatch("getAllData")
+          },
           
-  //         postData(){
-  //             let payload = {}
-  //             payload.name = this.inputData,
-  //             payload.id = 4
-  //             this.$store.dispatch("postData", payload)
-  //         },
-  //         putData(){
-  //             let payload = {}
-  //             payload.name = this.inputData,
-  //             payload.id = 1
-  //             this.$store.dispatch("putData", payload)
-  //         },
-  //         patchData(){
-  //             let payload = {}
-  //             payload.name = this.inputData,
-  //             payload.id = 1
-  //             this.$store.dispatch("patchData", payload)
-  //         },
-  //         deleteData(){
-  //             let payload = {}
-  //             payload.id = this.inputData,
-  //             this.$store.dispatch("deleteData", payload)
-  //         },
-  //         productPage(){
-  //             this.$store.dispatch("productPage", payload)
-  //         },
-  //         cartPage(){
-  //             this.$store.dispatch("cartPage", payload)
-  //         }
-  //     }}
+          postData(){
+              let payload = {}
+              payload.name = this.inputData,
+              payload.id = 4
+              this.$store.dispatch("postData", payload)
+          },
+          putData(){
+              let payload = {}
+              payload.name = this.inputData,
+              payload.id = 1
+              this.$store.dispatch("putData", payload)
+          },
+          patchData(){
+              let payload = {}
+              payload.name = this.inputData,
+              payload.id = 1
+              this.$store.dispatch("patchData", payload)
+          },
+          deleteData(){
+              let payload = {}
+              payload.id = this.inputData,
+              this.$store.dispatch("deleteData", payload)
+          },
+          // productPage(){
+          //     this.$store.dispatch("productPage", payload)
+          // },
+          // cartPage(){
+          //     this.$store.dispatch("cartPage", payload)
+          // }
+      }}
   </script>
