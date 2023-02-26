@@ -15,6 +15,13 @@
       </router-link>
     </div>
     </td>
+    <td>
+      <div>
+        <router-link to="/">
+          <button-component text="Home"></button-component>
+        </router-link>
+      </div>
+      </td>  
   </div>
 </template>
 <script>

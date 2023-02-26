@@ -5434,6 +5434,13 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /***/ }),
 
@@ -5708,6 +5715,13 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
   \***************************************************************************************************************************************************************************************************************************/
 /***/ (() => {
 
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -30257,6 +30271,21 @@ var render = function () {
         ),
       ]),
       _vm._v(" "),
+      _c("td", [
+        _c(
+          "div",
+          [
+            _c(
+              "router-link",
+              { attrs: { to: "/" } },
+              [_c("button-component", { attrs: { text: "Home" } })],
+              1
+            ),
+          ],
+          1
+        ),
+      ]),
+      _vm._v(" "),
       _c("td", [_c("checkout-component")], 1),
     ],
     1
@@ -30607,6 +30636,21 @@ var render = function () {
               "router-link",
               { attrs: { to: "/cart" } },
               [_c("button-component", { attrs: { text: "Cart" } })],
+              1
+            ),
+          ],
+          1
+        ),
+      ]),
+      _vm._v(" "),
+      _c("td", [
+        _c(
+          "div",
+          [
+            _c(
+              "router-link",
+              { attrs: { to: "/" } },
+              [_c("button-component", { attrs: { text: "Home" } })],
               1
             ),
           ],
